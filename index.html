@@ -16,28 +16,29 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
       --void:#0E0F18;--void-mid:#151722;--phosphor:#5FE0A6;--phosphor-bright:#93FFC9;
-      --amber-bright:#FFC069;--bone:#ECE8DA;--text-secondary:#AEB6C2;--text-tertiary:#6E7689;
-      --border:rgba(95,224,166,0.16);--border-mid:rgba(95,224,166,0.30);
+      --amber-bright:#FFC069;--bone:#ECE8DA;--text-secondary:#AEB6C2;--text-tertiary:#8A93A6;
+      --border:rgba(95,224,166,0.18);--border-mid:rgba(95,224,166,0.34);
     }
     body{min-height:100vh;background:var(--void);color:var(--bone);font-family:'Sora',Arial,sans-serif;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;}
-    .bg{position:fixed;inset:0;z-index:0;background-image:url('https://indieformer.com/images/abelina/hero-bg.jpg');background-size:cover;background-position:center;filter:brightness(0.32) saturate(1.05);}
-    .bg::after{content:'';position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 30%,rgba(14,15,24,0.45),var(--void) 85%);}
-    .wrap{position:relative;z-index:2;max-width:460px;margin:0 auto;padding:56px 22px 48px;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100vh;}
-    .logo{width:100%;max-width:300px;height:auto;margin-bottom:10px;filter:drop-shadow(0 8px 30px rgba(0,0,0,0.6));}
-    .eyebrow{font-family:'Caveat',cursive;font-size:21px;color:var(--phosphor-bright);transform:rotate(-1.5deg);margin-bottom:26px;}
+    .bg{position:fixed;inset:0;z-index:0;background-image:url('https://indieformer.com/images/abelina/hero-bg.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.08);}
+    .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,15,24,0.35) 0%,rgba(14,15,24,0.28) 40%,rgba(14,15,24,0.66) 100%);}
+    .wrap{position:relative;z-index:2;max-width:470px;margin:0 auto;padding:54px 22px 46px;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:100vh;}
+    .logo{width:100%;max-width:300px;height:auto;margin-bottom:10px;filter:drop-shadow(0 6px 26px rgba(0,0,0,0.7));}
+    .eyebrow{font-family:'Caveat',cursive;font-size:21px;color:var(--phosphor-bright);transform:rotate(-1.5deg);margin-bottom:26px;text-shadow:0 2px 10px rgba(0,0,0,0.7);}
     .links{width:100%;display:flex;flex-direction:column;gap:12px;}
-    .lnk{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 18px;border-radius:12px;font-size:15px;font-weight:600;border:1.5px solid var(--border-mid);background:rgba(21,23,34,0.72);backdrop-filter:blur(4px);color:var(--bone);transition:all .2s;text-decoration:none;}
-    .lnk:hover{border-color:var(--phosphor);color:var(--phosphor-bright);transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,0,0,0.35);}
-    .lnk.primary{background:var(--phosphor);color:var(--void);border-color:var(--phosphor);font-weight:700;}
-    .lnk.primary:hover{background:var(--phosphor-bright);border-color:var(--phosphor-bright);color:var(--void);}
+    .lnk{display:flex;align-items:center;gap:13px;width:100%;padding:14px 18px;border-radius:12px;font-size:15px;font-weight:600;border:1.5px solid var(--border-mid);background:rgba(16,17,26,0.78);backdrop-filter:blur(6px);color:var(--bone);transition:all .2s;text-decoration:none;text-align:left;}
+    .lnk:hover{border-color:var(--phosphor);color:var(--phosphor-bright);transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,0,0,0.4);}
+    .lnk svg{width:22px;height:22px;flex:0 0 22px;}
+    .lnk .t{flex:1;}
     .lnk small{display:block;font-size:11px;font-weight:400;color:var(--text-tertiary);}
-    .lnk.primary small{color:rgba(14,15,24,0.7);}
+    .lnk.primary{background:var(--phosphor);color:var(--void);border-color:var(--phosphor);font-weight:700;justify-content:center;text-align:center;}
+    .lnk.primary:hover{background:var(--phosphor-bright);border-color:var(--phosphor-bright);color:var(--void);}
     .socials{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px;width:100%;}
-    .soc{flex:1 1 120px;max-width:140px;padding:10px 8px;border-radius:10px;border:1px solid var(--border);background:rgba(21,23,34,0.6);font-size:12px;font-weight:600;color:var(--text-secondary);transition:all .2s;text-decoration:none;}
-    .soc:hover{border-color:var(--phosphor);color:var(--phosphor-bright);}
-    .soc span{display:block;font-size:10px;font-weight:400;color:var(--text-tertiary);}
-    .foot{margin-top:auto;padding-top:30px;font-size:12px;color:var(--text-tertiary);}
-    .foot a{color:var(--text-secondary);text-decoration:none;}
+    .soc{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1 1 80px;max-width:96px;padding:12px 6px;border-radius:11px;border:1px solid var(--border);background:rgba(16,17,26,0.7);font-size:11px;font-weight:600;color:var(--text-secondary);transition:all .2s;text-decoration:none;}
+    .soc:hover{border-color:var(--phosphor);color:var(--phosphor-bright);transform:translateY(-2px);}
+    .soc svg{width:20px;height:20px;}
+    .foot{margin-top:auto;padding-top:30px;font-size:12px;color:var(--text-secondary);}
+    .foot a{color:var(--bone);text-decoration:none;}
     .foot a:hover{color:var(--phosphor-bright);}
   </style>
 </head>
@@ -49,18 +50,45 @@
     <div class="eyebrow">a hand-crafted afterlife · published by Indieformer</div>
 
     <div class="links">
-      <a class="lnk primary" href="https://store.steampowered.com/app/3682900/Abelina/" target="_blank" rel="noopener">✦ Wishlist on Steam</a>
-      <a class="lnk" href="https://discord.gg/xE9eTQNJT4" target="_blank" rel="noopener">Join the Discord <small>watch us build it in the open</small></a>
-      <a class="lnk" href="https://indieformer.com/abelina/presskit/" target="_blank" rel="noopener">Press Kit <small>factsheet, screenshots, logos</small></a>
-      <a class="lnk" href="https://gabeaskew.com/abelina" target="_blank" rel="noopener">Dev site</a>
+      <a class="lnk primary" href="https://store.steampowered.com/app/3682900/Abelina/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.98 0C5.7 0 .53 4.84.02 11l6.4 2.65c.54-.37 1.2-.59 1.9-.59h.18l2.85-4.13v-.06c0-2.48 2.02-4.5 4.5-4.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5h-.1l-4.06 2.9v.16a3.38 3.38 0 0 1-6.72.5L.44 15.2A12 12 0 1 0 11.98 0zM7.53 18.2l-1.46-.6c.26.54.71 1 1.31 1.25a2.55 2.55 0 0 0 1.96-4.7l-1.51.62a1.87 1.87 0 1 1-1.43 3.46zm10.42-9.28a3 3 0 1 0-6 0 3 3 0 0 0 6 0zm-5.26 0a2.26 2.26 0 1 1 4.52 0 2.26 2.26 0 0 1-4.52 0z"/></svg>
+        <span class="t">Wishlist on Steam</span>
+      </a>
+      <a class="lnk" href="https://discord.gg/xE9eTQNJT4" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.27 5.33A16.5 16.5 0 0 0 15 4l-.2.42a15.3 15.3 0 0 0-4.6 0L10 4a16.5 16.5 0 0 0-4.27 1.33C2.07 9.46 1.32 13.46 1.69 17.4a17.5 17.5 0 0 0 5.3 2.66c.43-.58.8-1.2 1.13-1.85a10.8 10.8 0 0 1-1.78-.85l.44-.32a12.4 12.4 0 0 0 10.56 0l.44.32c-.57.34-1.17.63-1.79.85.33.65.7 1.27 1.13 1.85a17.4 17.4 0 0 0 5.3-2.66c.44-4.57-.75-8.53-3.16-12.07zM8.84 15.02c-1.04 0-1.9-.96-1.9-2.13s.84-2.13 1.9-2.13 1.92.96 1.9 2.13c0 1.17-.85 2.13-1.9 2.13zm6.32 0c-1.04 0-1.9-.96-1.9-2.13s.84-2.13 1.9-2.13 1.92.96 1.9 2.13c0 1.17-.84 2.13-1.9 2.13z"/></svg>
+        <span class="t">Join the Discord<small>watch us build it in the open</small></span>
+      </a>
+      <a class="lnk" href="https://indieformer.com/abelina/presskit/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5zm0-7h4V11H8V9.5z"/></svg>
+        <span class="t">Press Kit<small>factsheet, screenshots, logos</small></span>
+      </a>
+      <a class="lnk" href="https://gabeaskew.com/abelina" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8 8 0 0 1 18.93 8zM12 4c.83 1.2 1.48 2.53 1.91 4h-3.82c.43-1.47 1.08-2.8 1.91-4zM4.26 14a8 8 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26zm.81 2h2.95c.32 1.25.78 2.45 1.38 3.56A8 8 0 0 1 5.07 16zm2.95-8H5.07a8 8 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8zM12 20c-.83-1.2-1.48-2.53-1.91-4h3.82A14.9 14.9 0 0 1 12 20zm2.34-6H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4zm.26 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8 8 0 0 1-4.33 3.56zM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8 8 0 0 1 0 4h-3.38z"/></svg>
+        <span class="t">Dev site<small>gabeaskew.com/abelina</small></span>
+      </a>
     </div>
 
     <div class="socials">
-      <a class="soc" href="https://bsky.app/profile/abelinagame.bsky.social" target="_blank" rel="noopener">Bluesky<span>@abelinagame</span></a>
-      <a class="soc" href="https://threads.net/@glabe_raskew" target="_blank" rel="noopener">Threads<span>@glabe_raskew</span></a>
-      <a class="soc" href="https://www.instagram.com/glabe_raskew" target="_blank" rel="noopener">Instagram<span>@glabe_raskew</span></a>
-      <a class="soc" href="https://www.tiktok.com/@glabe_raskew" target="_blank" rel="noopener">TikTok<span>@glabe_raskew</span></a>
-      <a class="soc" href="https://www.youtube.com/@AbelinaTheGame" target="_blank" rel="noopener">YouTube<span>@AbelinaTheGame</span></a>
+      <a class="soc" href="https://bsky.app/profile/abelinagame.bsky.social" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 10.8C10.9 8.69 7.95 4.75 5.2 2.8 2.57.94 1.56 1.27.9 1.57.14 1.91 0 3.08 0 3.77c0 .69.38 5.65.62 6.48.82 2.74 3.72 3.66 6.39 3.36-3.91.58-7.39 2-2.83 7.08 5.01 5.19 6.87-1.11 7.82-4.31.96 3.2 2.05 9.27 7.74 4.31 4.27-4.31 1.17-6.5-2.74-7.08 2.67.3 5.57-.62 6.39-3.36.24-.83.62-5.79.62-6.48 0-.69-.14-1.86-.9-2.2-.66-.3-1.67-.63-4.3 1.23-2.75 1.95-5.7 5.89-6.8 8z"/></svg>
+        Bluesky
+      </a>
+      <a class="soc" href="https://threads.net/@glabe_raskew" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.19 24h-.01c-3.58-.02-6.33-1.2-8.18-3.51C2.35 18.44 1.5 15.59 1.47 12.01v-.02c.03-3.58.88-6.43 2.53-8.48C5.85 1.2 8.6.02 12.18 0h.01c2.75.02 5.04.73 6.83 2.1 1.68 1.29 2.86 3.13 3.51 5.47l-2.04.57c-1.1-3.96-3.9-5.98-8.3-6.02-2.91.02-5.11.94-6.54 2.72C4.31 6.5 3.62 8.91 3.6 12c.03 3.09.72 5.5 2.06 7.16 1.43 1.78 3.63 2.7 6.54 2.72 2.62-.02 4.36-.63 5.8-2.05 1.65-1.61 1.62-3.59 1.09-4.8-.31-.71-.87-1.3-1.63-1.75-.2 1.36-.62 2.45-1.28 3.27-.89 1.1-2.15 1.7-3.75 1.79-1.21.07-2.37-.22-3.27-.81-1.07-.7-1.69-1.78-1.76-3.04-.13-2.41 1.77-4.14 4.73-4.31.9-.05 1.74-.01 2.5.11-.1-.61-.31-1.1-.61-1.45-.42-.49-1.07-.74-1.92-.75h-.06c-.69 0-1.62.19-2.21 1.08l-1.74-1.17c.79-1.16 2.07-1.8 3.95-1.8h.07c3.16.02 5.04 1.96 5.36 5.34l.01.13c.83.37 1.58.91 2.16 1.6 1.05 1.27 1.34 3.2.69 4.7-.85 1.96-2.95 3.42-6.06 3.45z"/></svg>
+        Threads
+      </a>
+      <a class="soc" href="https://www.instagram.com/glabe_raskew" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.38.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.12-.66-.66-1.33-1.08-2.12-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        Instagram
+      </a>
+      <a class="soc" href="https://www.tiktok.com/@glabe_raskew" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .59.05.88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.83a8.16 8.16 0 0 0 4.77 1.52V6.9a4.85 4.85 0 0 1-1.84-.21z"/></svg>
+        TikTok
+      </a>
+      <a class="soc" href="https://www.youtube.com/@AbelinaTheGame" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        YouTube
+      </a>
     </div>
 
     <div class="foot">An <a href="https://indieformer.com/">Indieformer</a> game</div>
